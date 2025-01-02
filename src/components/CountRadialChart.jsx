@@ -20,7 +20,7 @@ const data = [
 
 function CountRadialChart() {
   return (
-    <div className="bg-white rounded-md shadow-md flex flex-col p-4 min-w-[400px] h-full">
+    <div className="bg-white rounded-md shadow-md flex flex-col p-4 min-w-[400px]">
       {/* Title */}
       <div>
         <h1 className="text-2xl font-semibold text-center">Students :</h1>
@@ -60,7 +60,7 @@ function CountRadialChart() {
           {/* Girls */}
           <div className="flex flex-col items-center">
             <div className="h-4 w-4  rounded-full bg-blue-400 "></div>
-            <h1 className="text-2xl text-slate-600 font-semibold">90</h1>
+            <h1 className="text-2xl text-slate-600 font-semibold">0</h1>
             <p className=" text-gray-400">GIRLS (45%)</p>
           </div>
         </div>
