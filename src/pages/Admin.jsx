@@ -1,11 +1,15 @@
 import HeadCounts from "../components/HeadCount";
 import CountRadialChart from "../components/CountRadialChart";
-import { AttendanceChart, FinanaceGraphChart } from "../components";
+import {
+  AttendanceChart,
+  EventCalender,
+  FinanceGraphChart,
+} from "../components";
 
 function Admin() {
   return (
-    <div className="flex items-center justify-between overflow-y-auto h-fit">
-      <div className="flex flex-col items-center w-2/3  gap-4">
+    <div className="flex overflow-y-scroll min-h-[70vh]">
+      <div className="flex flex-col items-center w-2/3 h-full">
         {/* COUNT COMPONENTS */}
         <div className="flex justify-evenly w-full items-center mt-4">
           <HeadCounts type="Students" count="200" />
@@ -14,27 +18,29 @@ function Admin() {
           <HeadCounts type="Staffs" count="35" />
         </div>
         {/* Graphs and Charts */}
-        <div className="flex flex-col gap-5 mt-4  w-full items-center">
-          {/* top */}
-          <div className="flex gap-6 w-full  items-center">
-            {/* count Chart */}
+        <div className="flex flex-col gap-6 w-full  mt-4 p-2">
+          {/* TOP */}
+          <div className="flex gap-4 w-full items-center">
+            {/* COUNT CHART */}
             <div className="h-full">
               <CountRadialChart />
             </div>
-            {/* attendance Chart */}
-            <div className=" flex-1 h-full">
+            {/* Attendance Chart */}
+            <div className="flex-1 h-full">
               <AttendanceChart />
             </div>
           </div>
-          {/* bottom */}
+          {/* BOTTOM */}
           <div className="w-full bg-white rounded-md shadow-md p-4 min-w-[400px] h-full flex-1">
-            {/* FinanaceGraphChart */}
-            <FinanaceGraphChart />
+            {/* Finance Graph */}
+            <FinanceGraphChart />
           </div>
         </div>
       </div>
       {/*Date/Time*/}
-      <div></div>
+      <div>
+        <EventCalender />
+      </div>
     </div>
   );
 }

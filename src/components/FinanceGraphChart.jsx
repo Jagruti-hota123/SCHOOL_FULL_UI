@@ -21,49 +21,49 @@ const data = [
     spend: 40000,
   },
   {
-    name: "MARCH",
-    income: 60000,
-    spend: 40000,
+    name: "MAR",
+    income: 30000,
+    spend: 20000,
   },
   {
     name: "APR",
-    income: 60000,
-    spend: 40000,
+    income: 55000,
+    spend: 35000,
   },
   {
     name: "MAY",
-    income: 60000,
-    spend: 40000,
+    income: 70000,
+    spend: 30000,
   },
   {
     name: "JUNE",
-    income: 60000,
-    spend: 40000,
+    income: 80000,
+    spend: 45000,
   },
   {
     name: "JULY",
-    income: 60000,
-    spend: 40000,
+    income: 20000,
+    spend: 10000,
   },
   {
     name: "AUG",
-    income: 60000,
-    spend: 40000,
+    income: 20000,
+    spend: 10000,
   },
   {
-    name: "SEP",
-    income: 60000,
-    spend: 40000,
+    name: "SEPT",
+    income: 20000,
+    spend: 10000,
   },
   {
     name: "OCT",
-    income: 60000,
-    spend: 40000,
+    income: 20000,
+    spend: 10000,
   },
   {
     name: "NOV",
-    income: 55000,
-    spend: 30000,
+    income: 20000,
+    spend: 10000,
   },
   {
     name: "DEC",
@@ -71,44 +71,41 @@ const data = [
     spend: 10000,
   },
 ];
-
-const FinanceGraphChart = () => {
+function FinanceGraphChart() {
   return (
     <div className="w-full h-full">
-      {/* title */}
+      {/* Titile */}
       <div>
         <h1 className="text-2xl font-semibold">Finance</h1>
       </div>
-      <div>
-        <ResponsiveContainer minwidth="inherit" minheight="300px">
-          <LineChart
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Line
-              type="monotone"
-              dataKey="pv"
-              stroke="#8884d8"
-              activeDot={{ r: 8 }}
-            />
-            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
+      {/* Chart */}
+      <ResponsiveContainer minWidth="inherit" minHeight="400px">
+        <LineChart
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line
+            type="monotone"
+            dataKey="income"
+            stroke="#8884d8"
+            activeDot={{ r: 8 }}
+          />
+          <Line type="monotone" dataKey="spend" stroke="#82ca9d" />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
-};
-
+}
 export default FinanceGraphChart;

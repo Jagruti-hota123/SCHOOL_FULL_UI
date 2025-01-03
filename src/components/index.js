@@ -4,4 +4,5 @@ export { default as Footer } from "./Footer";
 export { default as HeadCount } from "./HeadCount";
 export { default as CountRadialChart } from "./CountRadialChart";
 export { default as AttendanceChart } from "./AttendanceChart";
-export { default as FinanaceGraphChart } from "./FinanceGraphChart";
+export { default as FinanceGraphChart } from "./FinanceGraphChart";
+export { default as EventCalender } from "./EventCalender";

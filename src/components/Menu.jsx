@@ -8,7 +8,7 @@ import { TiHomeOutline } from "react-icons/ti";
 
 const Menu = () => {
   return (
-    <div className="min-h-screen  bg-slate-600">
+    <div className="min-h-screen bg-slate-600">
       {/* logo */}
       <div className="flex items-center justify-evenly h-20">
         <img src="" alt="logo" />
