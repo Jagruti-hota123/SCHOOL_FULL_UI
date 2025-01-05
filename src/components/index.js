@@ -6,3 +6,4 @@ export { default as CountRadialChart } from "./CountRadialChart";
 export { default as AttendanceChart } from "./AttendanceChart";
 export { default as FinanceGraphChart } from "./FinanceGraphChart";
 export { default as EventCalender } from "./EventCalender";
+export { default as BigCalender } from "./BigCalender";

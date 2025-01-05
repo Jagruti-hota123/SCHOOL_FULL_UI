@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import { Admin, Login, Signup, Student, Teacher } from "./pages";
+import { TeacherList } from "./components/lists";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/teacher",
         element: <Teacher />,
+      },
+      {
+        path: "/lists/teacher",
+        element: <TeacherList />,
       },
     ],
   },

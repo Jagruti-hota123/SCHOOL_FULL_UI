@@ -10,7 +10,7 @@ function App() {
           <Menu />
         </div>
         {/* right */}
-        <div className="w-[80%] sm:w-[84%] md:w-[84%] lg:w-[90%] bg-slate-300 flex flex-col min-h-screen">
+        <div className="w-[80%] sm:w-[84%] md:w-[88%] lg:w-[88%] bg-slate-100 flex flex-col min-h-screen">
           <Navbar />
           <div className="flex-1">
             <Outlet />
